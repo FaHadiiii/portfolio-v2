@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="min-h-screen text-[var(--foreground)] font-sans relative bg-[var(--background-muted)]">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

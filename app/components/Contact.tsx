@@ -6,12 +6,29 @@ import { Send } from "lucide-react";
 export default function Contact() {
   const [form, setForm] = useState({ email: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.MouseEvent) => {
+  const handleSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
-    // TODO: wire up your form handler
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    setLoading(true);
+    setError("");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    setLoading(false);
+
+    if (res.ok) {
+      setSent(true);
+      setForm({ email: "", subject: "", message: "" });
+      setTimeout(() => setSent(false), 3000);
+    } else {
+      setError("Something went wrong. Try again.");
+    }
   };
 
   return (
@@ -70,14 +87,16 @@ export default function Contact() {
         </div>
 
         {/* Submit row */}
-        <div className="flex justify-end px-4 py-3">
+        <div className="flex flex-col items-end px-4 py-3 gap-1">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 text-xs font-medium text-[var(--background)] bg-[var(--foreground)] hover:opacity-80 transition-opacity duration-150 rounded-md px-4 py-2 focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:outline-none"
+            disabled={loading || sent}
+            className="flex items-center gap-2 text-xs font-medium text-[var(--background)] bg-[var(--foreground)] hover:opacity-80 transition-opacity duration-150 rounded-md px-4 py-2 focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:outline-none disabled:opacity-50"
           >
             <Send size={12} strokeWidth={2} />
-            {sent ? "Sent!" : "Send Message"}
+            {sent ? "Sent!" : loading ? "Sending..." : "Send Message"}
           </button>
+          {error && <p className="text-xs text-red-500">{error}</p>}
         </div>
       </div>
     </section>

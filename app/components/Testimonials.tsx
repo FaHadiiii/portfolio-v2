@@ -9,32 +9,32 @@ const testimonials = [
     role: "Engineering Manager",
     company: "Acme Corp",
     quote:
-      "One of the most detail-oriented engineers I've worked with. Kacs consistently delivers polished, production-ready code that the whole team trusts.",
-    initials: "SC",
+      "Hadi may be early in his career, but his attention to detail and commitment to clean, reliable code stands out. Always eager to learn, he quickly becomes a valuable contributor to any mobile project.",
+    avatar: "https://robohash.org/sarah1.png?size=50x50",
   },
   {
     name: "James Liu",
     role: "Product Designer",
     company: "Startup XYZ",
     quote:
-      "Rare to find a frontend engineer who truly understands design. Kacs bridges the gap between Figma and production better than anyone I've worked with.",
-    initials: "JL",
+      "Hadi has a natural talent for turning designs into seamless mobile experiences. His ability to translate UI/UX concepts into working apps is impressive for someone just starting his career.",
+    avatar: "https://robohash.org/james1.png?size=50x50",
   },
   {
     name: "Ahmad Rizky",
     role: "Tech Lead",
     company: "Tech Hub",
     quote:
-      "Exceptional at finding elegant solutions to complex architecture problems, while keeping user experience as the top priority.",
-    initials: "AR",
+      "Even with just over a year of experience, Hadi approaches technical challenges with curiosity and clarity. He consistently delivers thoughtful, maintainable solutions for complex problems.",
+    avatar: "https://robohash.org/ahmad1.png?size=50x50",
   },
   {
     name: "Emily Watson",
     role: "CEO",
     company: "NextGen Solutions",
     quote:
-      "We brought Kacs in for a critical rebuild and were completely blown away. Delivered ahead of schedule with unbelievable polish.",
-    initials: "EW",
+      "Hadi joined us for a mobile feature rollout and exceeded expectations. His drive, adaptability, and focus on quality make him a rising star in mobile development.",
+    avatar: "https://robohash.org/emily1.png?size=50x50",
   },
 ];
 
@@ -70,10 +70,12 @@ function TestimonialCard({ t }: { t: any }) {
     <Card className="bg-transparent relative rounded-none shadow-none w-[320px] shrink-0 hover:bg-[var(--background)]/50 transition-colors duration-200 overflow-visible">
       <Icons />
       <CardHeader className="p-5 pb-3 flex flex-row items-center gap-3.5 space-y-0">
-        <div className="w-10 h-10 rounded-full bg-[var(--border-strong)]/40 border border-[var(--border-strong)] flex items-center justify-center flex-shrink-0">
-          <span className="text-[11px] font-bold text-[var(--foreground)]">
-            {t.initials}
-          </span>
+        <div className="w-10 h-10 rounded-full bg-[var(--border-strong)]/40 border border-[var(--border-strong)] flex items-center justify-center flex-shrink-0 overflow-hidden">
+          <img
+            src={t.avatar}
+            alt={t.name}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="flex flex-col gap-0.5">
           <div className="flex items-baseline justify-between w-full">
