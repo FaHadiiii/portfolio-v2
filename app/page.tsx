@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { DashedDivider } from "@/components/ui/dashed-divider";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

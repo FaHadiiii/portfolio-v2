@@ -45,7 +45,7 @@ export default function Experience() {
       {/* Header */}
       <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] px-3.5">
+          <span className="text-xs font-semibold uppercase tracking-[0.12em] px-3">
             Experience
           </span>
           <span className="text-[11px] text-[var(--foreground)] bg-[var(--border)]/40 border border-[var(--border)] rounded px-1.5 py-0.5 mr-3">
