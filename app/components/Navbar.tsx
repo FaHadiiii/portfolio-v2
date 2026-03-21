@@ -22,6 +22,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const navbarHeight = 64; // header h-12 (48px) + mt-4 (16px) or just enough space
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      // Update URL hash without jumping
+      window.history.pushState(null, "", `#${id}`);
+    }
+  };
+
   return (
     <header
       className={`${pixelFont.variable} sticky top-0 z-50 mt-4 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-md`}
@@ -46,6 +65,7 @@ export default function Navbar() {
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
+              onClick={(e) => handleScroll(e, item.toLowerCase())}
               className="hidden sm:block text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] px-2.5 py-1.5 rounded-md transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2"
             >
               {item}

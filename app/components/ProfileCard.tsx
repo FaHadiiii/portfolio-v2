@@ -3,6 +3,8 @@
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { DashedDivider } from "@/components/ui/dashed-divider";
+import Image from "next/image";
+
 import {
   MapPin,
   Mail,
@@ -103,8 +105,14 @@ export default function ProfileCard() {
         {/* Full-width horizontal line */}
         <div className="absolute left-1/2 bottom-[76px] w-screen -translate-x-1/2 h-px bg-[var(--border)]" />
         {/* Avatar */}
-        <div className="relative z-10 w-24 h-24 rounded-full bg-[var(--background-panel)] border-2 border-[var(--border-strong)] flex items-center justify-center text-xl font-bold text-[var(--foreground)] select-none flex-shrink-0">
-          K
+        <div className="relative z-10 w-24 h-24 rounded-full overflow-hidden bg-[var(--background-panel)] border-2 border-[var(--border-strong)] flex items-center justify-center text-xl font-bold text-[var(--foreground)] select-none flex-shrink-0">
+          <Image
+            src={"/image/profile.jpg"}
+            alt={"Publilius Syrus"}
+            width={96}
+            height={96}
+            className="object-cover w-full h-full"
+          />
         </div>
         {/* Info */}
         <div className="flex flex-col gap-1 min-w-0 relative z-10 mb-2">

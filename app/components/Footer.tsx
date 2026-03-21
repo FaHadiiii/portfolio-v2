@@ -1,3 +1,4 @@
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Link from "next/link";
 
 const links = [

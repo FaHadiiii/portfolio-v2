@@ -1,41 +1,50 @@
+import Image from "next/image";
+
 const experiences = [
   {
-    company: "Acme Corp",
-    role: "Senior Frontend Engineer",
-    type: "Full-time",
-    period: "2023 — Now",
-    duration: "2 yrs",
+    company: "ForthNorth Technologies Sdn. Bhd.",
+    logo: "/logo/fnt.webp",
+    role: "Software Engineer (Mobile)",
+    type: "Contract",
+    period: "2025 — Present",
+    duration: "1+ year",
     current: true,
     achievements: [
-      "Led migration of a legacy React app to Next.js 14 App Router, cutting TTFB by 40%.",
-      "Designed and built a shared component library used across 4 product teams.",
-      "Introduced Playwright E2E test suite, achieving 80% coverage of critical flows.",
+      "Built an offshore crew management mobile app from scratch.",
+      "Maintained and enhanced an e-commerce agent management app.",
+      "Developed a customer-facing e-commerce mobile application.",
+      "Designed and prototyped system UI and UX.",
+      "Managed deployments to the App Store and Google Play Store.",
     ],
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Playwright"],
+    tags: ["Flutter", "Dart", "Figma", "Firebase", "Git"],
   },
   {
-    company: "Startup XYZ",
-    role: "Frontend Engineer",
-    type: "Full-time",
-    period: "2021 — 2023",
-    duration: "2 yrs",
+    company: "Todak Digitech Sdn. Bhd.",
+    logo: "/logo/tdk.png",
+    role: "Software Developer Intern",
+    type: "Internship",
+    period: "2024 — 2025",
+    duration: "6 months",
     achievements: [
-      "Architected the frontend for a real-time trading dashboard handling 10k concurrent users.",
-      "Collaborated with design team to build a design token system from scratch.",
-      "Mentored a team of 3 junior engineers and led weekly code review sessions.",
+      "Refactored a mobile app to improve code quality and maintainability.",
+      "Contributed to the development of an internal student management system.",
+      "Built and maintained websites using WordPress.",
     ],
-    tags: ["React", "Redux", "GraphQL", "Storybook"],
+    tags: ["Flutter", "Dart", "WordPress", "Laravel", "Git"],
   },
   {
-    company: "Freelance",
-    role: "Frontend Consultant",
-    type: "Contract",
-    period: "2019 — 2021",
-    duration: "2 yrs",
+    company: "JPN Terengganu",
+    logo: "/logo/jpnt.png",
+    role: "IT Intern",
+    type: "Internship",
+    period: "2021 — 2022",
+    duration: "6 months",
     achievements: [
-      "Delivered 12+ client projects across e-commerce, SaaS, and portfolio sites.",
-      "Specialised in performance audits and Core Web Vitals optimisation.",
+      "Provided technical support for hardware and software issues.",
+      "Assisted in system setup, configuration, and maintenance.",
+      "Developed a data dashboard for IT operations and analytics.",
     ],
+    tags: ["Power BI", "Excel", "Google Apps Script"],
   },
 ];
 
@@ -88,7 +97,15 @@ export default function Experience() {
 
               <div className="flex flex-col items-start gap-2">
                 {/* Logo */}
-                <div className="w-8 h-8 rounded-md bg-[var(--background-panel)] border border-[var(--border)] flex items-center justify-center overflow-hidden"></div>
+                <div className="h-8 w-8 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={job.logo}
+                    alt={job.company}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
+                </div>
 
                 {/* Company name */}
                 <span className="text-[11px] font-bold text-[var(--foreground)] leading-tight">

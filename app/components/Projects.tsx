@@ -1,30 +1,70 @@
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
-    name: "DevFlow",
+    name: "BolaJom",
     description:
-      "Open-source developer task board with real-time collaboration, keyboard shortcuts, and a compact data-dense UI built for speed.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
-    href: "#",
+      "Building a platform to streamline football venue booking while helping players organise matches and connect within the community.",
+    tags: [
+      "Express.js",
+      "MySQL",
+      "Flutter",
+      "Figma",
+      "Redis",
+      "Meilisearch",
+      "Firebase",
+      "Docker",
+    ],
+    href: "",
     status: "Ongoing",
+    logo: "/logo/bolajom.png",
   },
   {
-    name: "TokenKit",
+    name: "e-Portfolio",
     description:
-      "Design token management CLI — sync tokens between Figma, CSS variables, and Tailwind config with a single command.",
-    tags: ["Node.js", "Figma API", "CLI"],
-    href: "#",
-    status: "Archived",
+      "Interactive portfolio website built with Next.js and Tailwind CSS. Showcasing projects, skills, and experience with a focus on clean design.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    href: "",
+    status: "Live",
+    logo: "/logo/portfolio.png",
   },
   {
-    name: "PerfLens",
+    name: "OptimaBank: Loyalty Reward",
     description:
-      "Browser extension for real-time Core Web Vitals monitoring overlaid directly on any website during development.",
-    tags: ["Chrome Extension", "JavaScript", "WebVitals"],
-    href: "#",
+      "Developed as part of a certificate requirement for Khazanah Nasional. The primary responsibility involved building the backend using Express.js and MySQL, ensuring secure and efficient data handling for user rewards and transactions.",
+    tags: ["Express.js", "MySQL", "React", "Render", "Figma"],
+    href: "",
     status: "Archived",
+    logo: "/logo/optima.png",
+  },
+  {
+    name: "Hustl: Job Hunting Tracker",
+    description:
+      "Hustl is a mobile application developed with Flutter. The objective is to help job seekers to organize their job applications and enhance thir experience with AI Insights.",
+    tags: ["Flutter", "Dart", "AppScript", "GCP"],
+    href: "",
+    status: "Archived",
+    logo: "/logo/hustl.jpg",
+  },
+  {
+    name: "Childcare Digital Book",
+    description:
+      "Childcare digital book is a mobile application developed as my bachelor's final year project with aim to help digitalize childcare and infants medical checkup.",
+    tags: ["Flutterflow", "Firebase", "GCP"],
+    href: "",
+    status: "Archived",
+    logo: "/logo/childcare.jpeg",
+  },
+  {
+    name: "ARJirim",
+    description:
+      "ARJIrim is a mobile application developed as my diplomas's final year project. Developed using Unity 3D and Vuforia AR Engine aim to help standard fourth graders to learn matter topic interactively.",
+    tags: ["Unity 3D", "Vuforia", "C#"],
+    href: "",
+    status: "Archived",
+    logo: "/logo/arjirim.jpg",
   },
 ];
 
@@ -73,15 +113,21 @@ export default function Projects() {
               {/* Junction crosshair */}
               <span className="absolute bottom-[-1px] right-[-1px] w-1.5 h-1.5 border-t border-l border-[var(--border)] bg-[var(--background-panel)]" />
 
-              <div className="flex items-start gap-3">
-                {/* Project Logo Placeholder */}
-                <div className="w-8 h-8 rounded-md bg-[var(--background-panel)] border border-[var(--border)] flex items-center justify-center overflow-hidden flex-shrink-0 transition-colors">
-                  <span className="text-[10px] font-bold text-[var(--muted-foreground)] opacity-40 uppercase">
-                    {project.name.substring(0, 2)}
-                  </span>
+              {/* Logo + Text */}
+              <div className="flex flex-col sm:flex-row sm:items-start gap-3">
+                {/* Project Logo */}
+                <div className="h-8 w-8 flex overflow-hidden">
+                  <Image
+                    src={project.logo}
+                    alt={project.name}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
                 </div>
 
-                <div className="flex flex-col gap-1 w-full pr-6">
+                {/* Project text */}
+                <div className="flex flex-col gap-1 w-full sm:pr-6  sm:text-left">
                   <div className="flex items-center justify-between w-full">
                     <span className="text-xs font-bold text-[var(--foreground)] transition-colors duration-150 group-hover:text-[var(--muted-foreground)]">
                       {project.name}
@@ -98,7 +144,8 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-1 pt-1 ml-11">
+              {/* Tags */}
+              <div className="flex flex-wrap gap-1 pt-1 sm:ml-10 sm:justify-start">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}

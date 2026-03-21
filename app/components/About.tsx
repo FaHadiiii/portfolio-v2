@@ -9,10 +9,7 @@ const bullets = [
 
 export default function About() {
   return (
-    <section
-      id="about-detail"
-      className="relative pb-4"
-    >
+    <section id="about" className="relative pb-4">
       {/* Header */}
       <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
@@ -33,7 +30,7 @@ export default function About() {
           {bullets.map((text, i) => (
             <div
               key={i}
-              className="grid grid-cols-[16px_1fr] gap-2 px-4 py-2 items-start hover:bg-[var(--background-muted)]/50 transition-colors duration-100 rounded-md"
+              className="grid grid-cols-[16px_1fr] gap-2 px-1 py-2 items-start hover:bg-[var(--background-muted)]/50 transition-colors duration-100 rounded-md"
             >
               <span className="text-[9px] font-bold text-[var(--muted-foreground)] opacity-40 pt-0.5 tabular-nums">
                 {String(i + 1).padStart(2, "0")}
