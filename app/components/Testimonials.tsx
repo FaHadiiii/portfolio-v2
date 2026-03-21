@@ -67,7 +67,7 @@ const Icons = () => (
 
 function TestimonialCard({ t }: { t: any }) {
   return (
-    <Card className="bg-[var(--background-muted)] relative rounded-none shadow-none w-[320px] shrink-0 hover:bg-[var(--background)]/50 transition-colors duration-200 overflow-visible">
+    <Card className="bg-transparent relative rounded-none shadow-none w-[320px] shrink-0 hover:bg-[var(--background)]/50 transition-colors duration-200 overflow-visible">
       <Icons />
       <CardHeader className="p-5 pb-3 flex flex-row items-center gap-3.5 space-y-0">
         <div className="w-10 h-10 rounded-full bg-[var(--border-strong)]/40 border border-[var(--border-strong)] flex items-center justify-center flex-shrink-0">
@@ -87,7 +87,7 @@ function TestimonialCard({ t }: { t: any }) {
         </div>
       </CardHeader>
       <CardContent className="p-5 pt-0">
-        <p className="text-xs text-[var(--foreground)] leading-relaxed italic opacity-80">
+        <p className="text-xs text-[var(--muted-foreground)] leading-relaxed italic opacity-80">
           "{t.quote}"
         </p>
       </CardContent>
@@ -106,7 +106,7 @@ export default function Testimonials() {
   const fullRow2 = [...row2, ...row2, ...row2, ...row2];
 
   return (
-    <section className="relative py-12 overflow-hidden border-b border-[var(--border)]">
+    <section className="relative py-8 overflow-hidden">
       <style>{`
         @keyframes marquee-left {
           0% { transform: translateX(0%); }
@@ -128,8 +128,8 @@ export default function Testimonials() {
       `}</style>
 
       {/* Fading gradients */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[var(--background)] to-transparent z-20 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[var(--background)] to-transparent z-20 pointer-events-none" />
+      {/* <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[var(--background)] to-transparent z-20 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[var(--background)] to-transparent z-20 pointer-events-none" /> */}
 
       {/* Header */}
       {/* <div className="mb-8 relative z-10 flex flex-col items-center gap-1">

@@ -14,9 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kacs — Frontend Engineer",
-  description:
-    "Personal portfolio of Kacs, a frontend engineer specializing in Next.js, React, and TypeScript.",
+  title: "AFH — Software Developer",
+  description: "Fakhrul Hadi | Software Developer | Personal Portfolio",
 };
 
 export default function RootLayout({

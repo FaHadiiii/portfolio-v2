@@ -26,7 +26,7 @@ export default function Home() {
 
       <Navbar />
 
-      <main className="max-w-3xl mx-auto px-3.5 sm:px-6 lg:pl-4 lg:pr-4  pb-16">
+      <main className="max-w-3xl mx-auto px-3.5 sm:px-6 lg:pl-4 lg:pr-4  pb-8">
         <div className="flex flex-col gap-3">
           <ProfileCard />
           <div className="flex flex-col">
@@ -36,7 +36,9 @@ export default function Home() {
             <About />
             <Testimonials />
             <Experience />
+            <DashedDivider />
             <Projects />
+            <DashedDivider />
             <Contact />
           </div>
         </div>
