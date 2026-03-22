@@ -108,7 +108,7 @@ export default function Testimonials() {
   const fullRow2 = [...row2, ...row2, ...row2, ...row2];
 
   return (
-    <section className="relative py-8 overflow-hidden">
+    <section id="testimonials" className="relative py-8 overflow-hidden">
       <style>{`
         @keyframes marquee-left {
           0% { transform: translateX(0%); }

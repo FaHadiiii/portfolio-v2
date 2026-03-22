@@ -4,6 +4,7 @@ import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { DashedDivider } from "@/components/ui/dashed-divider";
 import BorderGlow from "@/components/BorderGlow";
+import Shuffle from "@/components/Shuffle";
 import Image from "next/image";
 
 import {
@@ -115,12 +116,18 @@ export default function ProfileCard() {
             speedMax={1.6}
             speedScale={1}
           />
-          <span
-            className={`${pixelFont.variable} relative z-10 text-3xl text-[var(--foreground)] transition-opacity duration-200 ${scrolled ? "opacity-0" : "opacity-100"} select-none pb-4`}
+          <Shuffle
+            text="AFH"
+            tag="span"
+            className={`${pixelFont.variable} relative z-10 text-2xl tracking-tighter text-[var(--foreground)] transition-opacity duration-200 ${scrolled ? "opacity-0" : "opacity-100"} select-none`}
             style={{ fontFamily: "var(--font-pixel)" }}
-          >
-            AFH
-          </span>
+            shuffleDirection="down"
+            scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            triggerOnHover={true}
+            onShuffleComplete={undefined}
+            colorFrom={undefined}
+            colorTo={undefined}
+          />
         </div>
         {/* Full-width horizontal line */}
         <div className="absolute left-1/2 bottom-[76px] w-screen -translate-x-1/2 h-px bg-[var(--border)]" />

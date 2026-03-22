@@ -4,7 +4,7 @@ import { skills } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <section className="overflow-hidden relative">
+    <section id="skills" className="overflow-hidden relative">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

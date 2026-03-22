@@ -5,7 +5,14 @@ import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { Press_Start_2P } from "next/font/google";
 import { useEffect, useState } from "react";
 
-const navLinks = ["About", "Experience", "Education", "Projects", "Contact"];
+const navLinks = [
+  "About",
+  "Experience",
+  "Education",
+  "Projects",
+  "Honors",
+  "Contact",
+];
 
 const pixelFont = Press_Start_2P({
   weight: "400",

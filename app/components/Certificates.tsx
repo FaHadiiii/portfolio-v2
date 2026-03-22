@@ -30,7 +30,7 @@ const certificates = certificatesData.map((cert) => ({
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="relative bg-transparent">
+    <section id="honors" className="relative bg-transparent">
       {/* Section Header */}
       <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">

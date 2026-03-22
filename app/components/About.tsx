@@ -41,7 +41,7 @@ export default async function About() {
   const bullets = aboutBullets;
 
   return (
-    <section id="about" className="relative pb-4">
+    <section className="relative pb-4">
       {/* Header */}
       <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
         <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
