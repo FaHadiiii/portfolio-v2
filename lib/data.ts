@@ -323,7 +323,7 @@ export const testimonials = [
     role: "Operation Engineer",
     company: "AIMS Data Centre",
     quote:
-      "Jumpa random kat masjid, terus klik macam kenal lama, rupanya sama-sama orang tranung hoho 😄 Selalu bertukar cerita pasal kerja masing-masing. Overall, good guy.",
+      "Jumpa random kat masjid, terus klik macam kenal lama, rupanya sama-sama orang tranung hoho 😄 Selalu exchange knowledge pasal kerja masing-masing. Overall, good guy.",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQFqivSAAAutHg/profile-displayphoto-shrink_400_400/B56ZaRBIErHAAg-/0/1746189717094?e=1775692800&v=beta&t=W2YcokHWD2jKBKWHOgmXjP_SUjZzph_VsoS2ZzVatoM",
     linkedin:

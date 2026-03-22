@@ -142,7 +142,7 @@ export default function ProfileCard() {
         >
           <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center text-xl font-bold text-[var(--foreground)] select-none">
             <Image
-              src={"/image/profile.jpg"}
+              src={"/image/pfp.jpg"}
               alt={"Ahmad Fakhrul Hadi"}
               width={96}
               height={96}

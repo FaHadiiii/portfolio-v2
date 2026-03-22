@@ -95,7 +95,7 @@ export default function CVPage() {
                 </div>
                 <div className="flex items-center justify-center w-16 h-16 border border-[var(--border)] rounded-full overflow-hidden bg-[var(--background-muted)] print:border-black print:w-20 print:h-20">
                   <Image
-                    src="/image/profile.jpg"
+                    src="/image/pfp.jpg"
                     alt={profileData.name}
                     width={80}
                     height={80}
