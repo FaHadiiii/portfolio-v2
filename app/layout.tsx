@@ -13,9 +13,49 @@ const inter = Inter({
   display: "swap",
 });
 
+const title = "AFH — Software Developer";
+const description = "Fakhrul Hadi | Software Developer | Personal Portfolio";
+const url = "https://hadiayo.site";
+const ogImage = "/image/SEO.png";
+
 export const metadata: Metadata = {
-  title: "AFH — Software Developer",
-  description: "Fakhrul Hadi | Software Developer | Personal Portfolio",
+  metadataBase: new URL(url),
+  title: {
+    default: title,
+    template: `%s | AFH`,
+  },
+  description,
+  keywords: ["software developer", "portfolio", "Fakhrul Hadi", "AFH"],
+  authors: [{ name: "Fakhrul Hadi", url }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title,
+    description,
+    url,
+    siteName: "AFH Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "AFH — Software Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [ogImage],
+  },
 };
 
 export default function RootLayout({
