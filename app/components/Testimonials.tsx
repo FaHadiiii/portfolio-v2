@@ -1,42 +1,8 @@
 "use client";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { testimonials } from "@/lib/data";
 import { cn } from "@/lib/utils";
-
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "Engineering Manager",
-    company: "Acme Corp",
-    quote:
-      "Hadi may be early in his career, but his attention to detail and commitment to clean, reliable code stands out. Always eager to learn, he quickly becomes a valuable contributor to any mobile project.",
-    avatar: "https://robohash.org/sarah1.png?size=50x50",
-  },
-  {
-    name: "James Liu",
-    role: "Product Designer",
-    company: "Startup XYZ",
-    quote:
-      "Hadi has a natural talent for turning designs into seamless mobile experiences. His ability to translate UI/UX concepts into working apps is impressive for someone just starting his career.",
-    avatar: "https://robohash.org/james1.png?size=50x50",
-  },
-  {
-    name: "Ahmad Rizky",
-    role: "Tech Lead",
-    company: "Tech Hub",
-    quote:
-      "Even with just over a year of experience, Hadi approaches technical challenges with curiosity and clarity. He consistently delivers thoughtful, maintainable solutions for complex problems.",
-    avatar: "https://robohash.org/ahmad1.png?size=50x50",
-  },
-  {
-    name: "Emily Watson",
-    role: "CEO",
-    company: "NextGen Solutions",
-    quote:
-      "Hadi joined us for a mobile feature rollout and exceeded expectations. His drive, adaptability, and focus on quality make him a rising star in mobile development.",
-    avatar: "https://robohash.org/emily1.png?size=50x50",
-  },
-];
+import { ArrowUpRight, Lock } from "lucide-react";
 
 const Icon = ({ className }: { className?: string }) => (
   <svg
@@ -65,9 +31,20 @@ const Icons = () => (
   </>
 );
 
-function TestimonialCard({ t }: { t: any }) {
+interface Testimonial {
+  name: string;
+  role?: string;
+  company?: string;
+  quote: string;
+  avatar: string;
+  linkedin?: string;
+}
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  const hasLinkedin = !!t.linkedin;
+
   return (
-    <Card className="bg-transparent relative rounded-none shadow-none w-[320px] shrink-0 hover:bg-[var(--background)]/50 transition-colors duration-200 overflow-visible">
+    <Card className="bg-transparent relative rounded-none shadow-none w-[320px] shrink-0 hover:bg-[var(--background)]/50 transition-colors duration-200 overflow-visible group">
       <Icons />
       <CardHeader className="p-5 pb-3 flex flex-row items-center gap-3.5 space-y-0">
         <div className="w-10 h-10 rounded-full bg-[var(--border-strong)]/40 border border-[var(--border-strong)] flex items-center justify-center flex-shrink-0 overflow-hidden">
@@ -78,14 +55,39 @@ function TestimonialCard({ t }: { t: any }) {
           />
         </div>
         <div className="flex flex-col gap-0.5">
-          <div className="flex items-baseline justify-between w-full">
-            <CardTitle className="text-sm font-bold text-[var(--foreground)]">
-              {t.name}
-            </CardTitle>
+          <div className="flex items-center gap-1.5 min-w-0">
+            {hasLinkedin ? (
+              <a
+                href={t.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 group/link max-w-full"
+              >
+                <CardTitle className="text-sm font-bold text-[var(--foreground)] truncate group-hover/link:text-primary transition-colors">
+                  {t.name}
+                </CardTitle>
+                <ArrowUpRight className="size-3.5 text-[var(--muted-foreground)] group-hover/link:text-primary transition-colors shrink-0" />
+              </a>
+            ) : (
+              <div className="flex items-center gap-1 max-w-full">
+                <CardTitle className="text-sm font-bold text-[var(--foreground)] truncate">
+                  {t.name}
+                </CardTitle>
+                <Lock className="size-3 text-[var(--muted-foreground)] opacity-50 shrink-0" />
+              </div>
+            )}
           </div>
-          <span className="text-[10px] font-medium text-[var(--muted-foreground)] border-l-2 pl-2 border-[var(--border-strong)] mt-0.5">
-            {t.role} @ {t.company}
-          </span>
+          {t.role || t.company ? (
+            <span className="text-[10px] font-medium text-[var(--muted-foreground)] border-l-2 pl-2 border-[var(--border-strong)] mt-0.5">
+              {t.role && t.company
+                ? `${t.role} @ ${t.company}`
+                : t.role || t.company}
+            </span>
+          ) : (
+            <span className="text-[10px] font-medium text-[var(--muted-foreground)] mt-0.5">
+              -
+            </span>
+          )}
         </div>
       </CardHeader>
       <CardContent className="p-5 pt-0">
@@ -98,14 +100,12 @@ function TestimonialCard({ t }: { t: any }) {
 }
 
 export default function Testimonials() {
-  const row1 = [
-    ...testimonials,
-    ...testimonials,
-    ...testimonials,
-    ...testimonials,
-  ];
-  const row2 = [...testimonials].reverse();
-  const fullRow2 = [...row2, ...row2, ...row2, ...row2];
+  const midpoint = Math.ceil(testimonials.length / 2);
+  const firstHalf = testimonials.slice(0, midpoint);
+  const secondHalf = testimonials.slice(midpoint);
+
+  const row1 = [...firstHalf, ...firstHalf, ...firstHalf, ...firstHalf];
+  const row2 = [...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf];
 
   return (
     <section id="testimonials" className="relative py-8 overflow-hidden">
@@ -119,10 +119,10 @@ export default function Testimonials() {
           100% { transform: translateX(0%); }
         }
         .animate-marquee-left {
-          animation: marquee-left 45s linear infinite;
+          animation: marquee-left 100s linear infinite;
         }
         .animate-marquee-right {
-          animation: marquee-right 45s linear infinite;
+          animation: marquee-right 100s linear infinite;
         }
         .animate-marquee-left:hover, .animate-marquee-right:hover {
           animation-play-state: paused;
@@ -145,12 +145,12 @@ export default function Testimonials() {
 
       <div className="flex flex-col gap-8">
         <div className="flex w-max animate-marquee-left gap-6 px-3">
-          {row1.map((t, i) => (
+          {row1.map((t: Testimonial, i: number) => (
             <TestimonialCard key={`r1-${i}`} t={t} />
           ))}
         </div>
         <div className="flex w-max animate-marquee-right gap-6 px-3">
-          {fullRow2.map((t, i) => (
+          {row2.map((t: Testimonial, i: number) => (
             <TestimonialCard key={`r2-${i}`} t={t} />
           ))}
         </div>
