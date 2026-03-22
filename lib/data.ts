@@ -267,7 +267,8 @@ export const testimonials = [
   {
     name: "Syaff Ibrahim",
     quote: "Hehe❤️",
-    avatar: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Liliana",
+    avatar:
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/gift-bucket/portfolio/sni.jpg",
   },
   {
     name: "Faris Muzzammil",
