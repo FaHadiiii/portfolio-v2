@@ -1,24 +1,6 @@
 "use client";
 
-const skills = [
-  { name: "Next JS", slug: "nextdotjs", invertDark: true },
-  { name: "React", slug: "react" },
-  { name: "TypeScript", slug: "typescript" },
-  { name: "Tailwind CSS", slug: "tailwindcss" },
-  { name: "Node.js", slug: "nodedotjs" },
-  { name: "Express JS", slug: "express", invertDark: true },
-  { name: "MySQL", slug: "mysql" },
-  { name: "Docker", slug: "docker" },
-  { name: "Drizzle", slug: "drizzle" },
-  { name: "Flutter", slug: "flutter" },
-  { name: "Figma", slug: "figma" },
-  { name: "Dart", slug: "dart" },
-  { name: "Bruno", slug: "bruno", invertDark: true },
-  { name: "GCP", slug: "googlecloud" },
-  { name: "Firebase", slug: "firebase" },
-  { name: "Git", slug: "git" },
-  { name: "Redis", slug: "redis" },
-];
+import { skills } from "@/lib/data";
 
 export default function Skills() {
   return (

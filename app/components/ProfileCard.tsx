@@ -3,6 +3,7 @@
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { DashedDivider } from "@/components/ui/dashed-divider";
+import BorderGlow from "@/components/BorderGlow";
 import Image from "next/image";
 
 import {
@@ -13,9 +14,13 @@ import {
   Phone,
   User,
   Clock,
+  Volume2,
+  CloudDownload,
 } from "lucide-react";
 import { Press_Start_2P } from "next/font/google";
 import { useEffect, useState } from "react";
+
+import { profileData } from "@/lib/data";
 
 const pixelFont = Press_Start_2P({
   weight: "400",
@@ -26,6 +31,21 @@ const pixelFont = Press_Start_2P({
 export default function ProfileCard() {
   const [scrolled, setScrolled] = useState(false);
   const [time, setTime] = useState("");
+
+  const handleSpeak = () => {
+    if (typeof window !== "undefined" && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(profileData.pronunciation);
+      utterance.rate = 0.9;
+      utterance.pitch = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const selectedVoice = voices.find(
+        (v) => v.name === "Google UK English Female",
+      );
+      if (selectedVoice) utterance.voice = selectedVoice;
+      window.speechSynthesis.speak(utterance);
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -51,27 +71,27 @@ export default function ProfileCard() {
   }, []);
 
   const displayInfo = [
-    { key: "Role", icon: Briefcase, val: "Software Developer" },
-    { key: "Location", icon: MapPin, val: "Kuala Lumpur, MY" },
+    { key: "Role", icon: Briefcase, val: profileData.role },
+    { key: "Location", icon: MapPin, val: profileData.location },
     { key: "Local", icon: Clock, val: time || "Loading..." },
-    { key: "Sex", icon: User, val: "Male" },
+    { key: "Sex", icon: User, val: profileData.sex },
     {
       key: "Email",
       icon: Mail,
-      val: "hadiayo39@gmail.com",
-      link: "mailto:hadiayo39@gmail.com",
+      val: profileData.email,
+      link: `mailto:${profileData.email}`,
     },
     {
       key: "Phone",
       icon: Phone,
-      val: "+60 16-6468300",
-      link: "tel:+60166468300",
+      val: profileData.phone,
+      link: `tel:${profileData.phone.replace(/\s+/g, "")}`,
     },
     {
       key: "Web",
       icon: Globe,
-      val: "hadiayo.dev",
-      link: "https://hadiayo.dev",
+      val: profileData.web,
+      link: `https://${profileData.web}`,
     },
   ];
 
@@ -80,7 +100,7 @@ export default function ProfileCard() {
       {/* Avatar + name */}
       <div className="relative flex items-end gap-4 px-5 pt-52 pb-5">
         {/* Banner Section */}
-        <div className="absolute top-0 left-0 w-full bottom-[76px]  overflow-hidden flex items-center justify-center">
+        <div className="absolute top-0 left-0 w-full bottom-[76px] overflow-hidden flex items-center justify-center">
           <DottedGlowBackground
             className="pointer-events-none mask-radial-to-90% mask-radial-at-center absolute inset-0 z-0 opacity-50"
             opacity={0.3}
@@ -105,28 +125,59 @@ export default function ProfileCard() {
         {/* Full-width horizontal line */}
         <div className="absolute left-1/2 bottom-[76px] w-screen -translate-x-1/2 h-px bg-[var(--border)]" />
         {/* Avatar */}
-        <div className="relative z-10 w-24 h-24 rounded-full overflow-hidden bg-[var(--background-panel)] border-2 border-[var(--border-strong)] flex items-center justify-center text-xl font-bold text-[var(--foreground)] select-none flex-shrink-0">
-          <Image
-            src={"/image/profile.jpg"}
-            alt={"Publilius Syrus"}
-            width={96}
-            height={96}
-            className="object-cover w-full h-full"
-          />
-        </div>
+        <BorderGlow
+          borderRadius={48}
+          className="relative z-10 w-24 h-24 flex-shrink-0"
+          glowRadius={24}
+          glowIntensity={0.8}
+          animated={true}
+          backgroundColor="var(--background-panel)"
+        >
+          <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center text-xl font-bold text-[var(--foreground)] select-none">
+            <Image
+              src={"/image/profile.jpg"}
+              alt={"Ahmad Fakhrul Hadi"}
+              width={96}
+              height={96}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </BorderGlow>
         {/* Info */}
         <div className="flex flex-col gap-1 min-w-0 relative z-10 mb-2">
-          <h1 className="text-base font-bold text-[var(--foreground)] tracking-tight leading-none">
-            Ahmad Fakhrul Hadi
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-base font-bold text-[var(--foreground)] tracking-tight leading-none">
+              {profileData.name}
+            </h1>
+            <div className="flex items-center gap-2 translate-y-[1px]">
+              <button
+                onClick={handleSpeak}
+                className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
+                title="Pronounce name"
+              >
+                <Volume2 size={14} />
+              </button>
+              <a
+                href="/cv"
+                className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
+                title="View/Download CV"
+              >
+                <CloudDownload size={14} />
+              </a>
+            </div>
+          </div>
           <div className="flex items-center gap-1.5 mt-0.5">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-            </span>
-            <p className="text-xs font-medium text-[var(--muted-foreground)]">
-              Open to work
-            </p>
+            {profileData.openToWork && (
+              <>
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                </span>
+                <p className="text-xs font-medium text-[var(--muted-foreground)]">
+                  Open to work
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>

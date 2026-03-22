@@ -1,52 +1,7 @@
+import { TagList } from "@/components/ui/tag-list";
 import Image from "next/image";
 
-const experiences = [
-  {
-    company: "ForthNorth Technologies Sdn. Bhd.",
-    logo: "/logo/fnt.webp",
-    role: "Software Engineer (Mobile)",
-    type: "Contract",
-    period: "2025 — Present",
-    duration: "1+ year",
-    current: true,
-    achievements: [
-      "Built an offshore crew management mobile app from scratch.",
-      "Maintained and enhanced an e-commerce agent management app.",
-      "Developed a customer-facing e-commerce mobile application.",
-      "Designed and prototyped system UI and UX.",
-      "Managed deployments to the App Store and Google Play Store.",
-    ],
-    tags: ["Flutter", "Dart", "Figma", "Firebase", "Git"],
-  },
-  {
-    company: "Todak Digitech Sdn. Bhd.",
-    logo: "/logo/tdk.png",
-    role: "Software Developer Intern",
-    type: "Internship",
-    period: "2024 — 2025",
-    duration: "6 months",
-    achievements: [
-      "Refactored a mobile app to improve code quality and maintainability.",
-      "Contributed to the development of an internal student management system.",
-      "Built and maintained websites using WordPress.",
-    ],
-    tags: ["Flutter", "Dart", "WordPress", "Laravel", "Git"],
-  },
-  {
-    company: "JPN Terengganu",
-    logo: "/logo/jpnt.png",
-    role: "IT Intern",
-    type: "Internship",
-    period: "2021 — 2022",
-    duration: "6 months",
-    achievements: [
-      "Provided technical support for hardware and software issues.",
-      "Assisted in system setup, configuration, and maintenance.",
-      "Developed a data dashboard for IT operations and analytics.",
-    ],
-    tags: ["Power BI", "Excel", "Google Apps Script"],
-  },
-];
+import { experiences } from "@/lib/data";
 
 export default function Experience() {
   return (
@@ -147,7 +102,7 @@ export default function Experience() {
                     <span className="text-[9px] font-bold text-[var(--muted-foreground)] opacity-45 pt-0.5 tabular-nums">
                       {String(j + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-xs text-[var(--muted-foreground)] text-[var(--foreground)] leading-relaxed">
+                    <span className="text-xs text-[var(--foreground)] leading-relaxed">
                       {a}
                     </span>
                   </div>
@@ -155,16 +110,7 @@ export default function Experience() {
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-1 pt-2">
-                {job.tags?.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] font-semibold text-[var(--muted-foreground)] bg-[var(--border-strong)]/40 border border-[var(--border-strong)] rounded px-1.5 py-0.5 cursor-default transition-colors duration-100 hover:text-[var(--foreground)] hover:border-[var(--muted-foreground)]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <TagList tags={job.tags} className="pt-2" />
             </div>
           </div>
         </div>

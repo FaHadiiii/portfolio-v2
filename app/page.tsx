@@ -3,7 +3,9 @@ import ProfileCard from "./components/ProfileCard";
 import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
 import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
 import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
@@ -38,7 +40,10 @@ export default function Home() {
             <Testimonials />
             <Experience />
             <DashedDivider />
+            <Education />
+            <DashedDivider />
             <Projects />
+            <Certificates />
             <DashedDivider />
             <Contact />
           </div>

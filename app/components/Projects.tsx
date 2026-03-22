@@ -1,72 +1,9 @@
+import { TagList } from "@/components/ui/tag-list";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
-const projects = [
-  {
-    name: "BolaJom",
-    description:
-      "Building a platform to streamline football venue booking while helping players organise matches and connect within the community.",
-    tags: [
-      "Express.js",
-      "MySQL",
-      "Flutter",
-      "Figma",
-      "Redis",
-      "Meilisearch",
-      "Firebase",
-      "Docker",
-    ],
-    href: "",
-    status: "Ongoing",
-    logo: "/logo/bolajom.png",
-  },
-  {
-    name: "e-Portfolio",
-    description:
-      "Interactive portfolio website built with Next.js and Tailwind CSS. Showcasing projects, skills, and experience with a focus on clean design.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    href: "",
-    status: "Live",
-    logo: "/logo/portfolio.png",
-  },
-  {
-    name: "OptimaBank: Loyalty Reward",
-    description:
-      "Developed as part of a certificate requirement for Khazanah Nasional. The primary responsibility involved building the backend using Express.js and MySQL, ensuring secure and efficient data handling for user rewards and transactions.",
-    tags: ["Express.js", "MySQL", "React", "Render", "Figma"],
-    href: "",
-    status: "Archived",
-    logo: "/logo/optima.png",
-  },
-  {
-    name: "Hustl: Job Hunting Tracker",
-    description:
-      "Hustl is a mobile application developed with Flutter. The objective is to help job seekers to organize their job applications and enhance thir experience with AI Insights.",
-    tags: ["Flutter", "Dart", "AppScript", "GCP"],
-    href: "",
-    status: "Archived",
-    logo: "/logo/hustl.jpg",
-  },
-  {
-    name: "Childcare Digital Book",
-    description:
-      "Childcare digital book is a mobile application developed as my bachelor's final year project with aim to help digitalize childcare and infants medical checkup.",
-    tags: ["Flutterflow", "Firebase", "GCP"],
-    href: "",
-    status: "Archived",
-    logo: "/logo/childcare.jpeg",
-  },
-  {
-    name: "ARJirim",
-    description:
-      "ARJIrim is a mobile application developed as my diplomas's final year project. Developed using Unity 3D and Vuforia AR Engine aim to help standard fourth graders to learn matter topic interactively.",
-    tags: ["Unity 3D", "Vuforia", "C#"],
-    href: "",
-    status: "Archived",
-    logo: "/logo/arjirim.jpg",
-  },
-];
+import { projects } from "@/lib/data";
 
 export default function Projects() {
   return (
@@ -145,16 +82,10 @@ export default function Projects() {
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-1 pt-1 sm:ml-10 sm:justify-start">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] font-semibold text-[var(--muted-foreground)] bg-[var(--border-strong)]/40 border border-[var(--border-strong)] rounded px-1.5 py-0.5 transition-colors duration-100 hover:text-[var(--foreground)] hover:border-[var(--muted-foreground)]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <TagList
+                tags={project.tags}
+                className="pt-1 sm:ml-10 sm:justify-start"
+              />
             </div>
 
             {/* Status */}

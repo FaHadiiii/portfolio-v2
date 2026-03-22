@@ -24,6 +24,7 @@
   "registries": {
     "@react-bits": "https://reactbits.dev/r/{name}.json",
     "@aceternity": "https://ui.aceternity.com/registry/{name}.json",
-    "@cardcn": "https://cardcn.dev/r/{name}.json"
+    "@cardcn": "https://cardcn.dev/r/{name}.json",
+    "@kibo-ui": "https://www.kibo-ui.com/r/{name}.json"
   }
 }
