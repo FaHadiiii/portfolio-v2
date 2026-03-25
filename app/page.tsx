@@ -5,6 +5,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
+import TechnicalSkills from "./components/TechnicalSkills";
 import Certificates from "./components/Certificates";
 import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
@@ -43,6 +44,7 @@ export default function Home() {
             <Education />
             <DashedDivider />
             <Projects />
+            <TechnicalSkills />
             <Certificates />
             <DashedDivider />
             <Contact />

@@ -38,6 +38,51 @@ export const skills = [
   { name: "Redis", slug: "redis" },
 ];
 
+export const technicalSkills = [
+  {
+    category: "Programming & Frameworks",
+    skills: [
+      "TypeScript, JavaScript, Node.js, Next.js, Express.js",
+      "Vue.js, React.js",
+      "HTML5, CSS3, Tailwind CSS, Bootstrap",
+      "Flutter, Dart",
+      "Flask, C, C++",
+    ],
+  },
+  {
+    category: "Backend Development",
+    skills: [
+      "Node.js, Express.js, NestJS",
+      "Drizzle ORM, Prisma, Sequelize",
+      "REST APIs, GraphQL, WebSockets",
+    ],
+  },
+  {
+    category: "DevOps & Infrastructure",
+    skills: [
+      "Docker, Kubernetes, CICD",
+      "Git, GitHub Actions, GitLab",
+      "Nginx, Apache, Linux (Ubuntu/Debian)",
+    ],
+  },
+  {
+    category: "Cloud",
+    skills: ["Google Cloud Platform (GCP)", "Firebase, AWS, Vercel"],
+  },
+  {
+    category: "Database",
+    skills: ["MySQL, PostgreSQL, MongoDB", "Redis, Meilisearch, SQLite"],
+  },
+  {
+    category: "Development Tools",
+    skills: [
+      "Figma, Adobe XD, Canva",
+      "Bruno, Postman, Insomnia",
+      "VS Code, Android Studio, Xcode",
+    ],
+  },
+];
+
 export const experiences = [
   {
     company: "ForthNorth Technologies Sdn. Bhd.",

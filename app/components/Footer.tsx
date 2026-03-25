@@ -4,7 +4,9 @@ import Link from "next/link";
 const links = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
+  { label: "Honors", href: "#honors" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -15,7 +17,7 @@ export default function Footer() {
         <span className="text-xs text-[var(--foreground)]">
           © {new Date().getFullYear()} AFH
         </span>
-        <nav className="flex items-center gap-4">
+        <nav className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2 px-12 sm:px-0">
           {links.map((l) => (
             <Link
               key={l.label}
