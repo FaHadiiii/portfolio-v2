@@ -73,7 +73,7 @@ export default function TechnicalSkills() {
               </div>
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-3 py-1 rounded text-[10px] font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--border)]/30 transition-all active:scale-95"
+                className="flex items-center gap-1.5 py-1 rounded text-[10px] font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--border)]/30 transition-all active:scale-95"
               >
                 {copied ? (
                   <Check size={12} className="text-green-500" />
@@ -124,7 +124,7 @@ export default function TechnicalSkills() {
 
             <div className="flex gap-2 overflow-hidden">
               {/* JSON View */}
-              <div className="flex-1 text-[13px] leading-relaxed overflow-x-auto ml-8 sm:ml-0">
+              <div className="flex-1 text-[13px] leading-relaxed overflow-x-auto sm:ml-0">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeTab}

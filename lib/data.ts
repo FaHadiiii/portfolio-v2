@@ -42,8 +42,8 @@ export const technicalSkills = [
   {
     category: "Programming & Frameworks",
     skills: [
-      "TypeScript, JavaScript, Node.js, Next.js, Express.js",
-      "Vue.js, React.js",
+      "TypeScript, JavaScript, Node.js, Express.js",
+      "Next.js, React.js",
       "HTML5, CSS3, Tailwind CSS, Bootstrap",
       "Flutter, Dart",
       "Flask, C, C++",
@@ -52,33 +52,48 @@ export const technicalSkills = [
   {
     category: "Backend Development",
     skills: [
-      "Node.js, Express.js, NestJS",
-      "Drizzle ORM, Prisma, Sequelize",
-      "REST APIs, GraphQL, WebSockets",
+      "Node.js, Express.js, Flask",
+      "BullMQ, Redis, Meilisearch",
+      "Drizzle, Strapi",
+      "Payment Gateway",
+      "REST API, Zod",
+      "Firebase, Supabase",
     ],
   },
   {
     category: "DevOps & Infrastructure",
     skills: [
-      "Docker, Kubernetes, CICD",
-      "Git, GitHub Actions, GitLab",
-      "Nginx, Apache, Linux (Ubuntu/Debian)",
+      "Docker Compose, Ubuntu, CICD",
+      "AWS EC2, Cloudflare R2, AWS S3",
+      "AWS RDS, Alibaba ApsaraDB",
+      "Server Deployment, VPS Management",
+      "Nginx, Caddy, Zoloz",
+      "Git, DNS Management",
     ],
   },
   {
     category: "Cloud",
-    skills: ["Google Cloud Platform (GCP)", "Firebase, AWS, Vercel"],
+    skills: [
+      "Google Cloud Platform (GCP)",
+      "Firebase, Vercel, Cloudflare",
+      "AWS (EC2, S3, RDS)",
+      "Alibaba (ApsaraDB, ECS)",
+      "Tencent (Zoloz)",
+    ],
   },
   {
     category: "Database",
-    skills: ["MySQL, PostgreSQL, MongoDB", "Redis, Meilisearch, SQLite"],
+    skills: ["MySQL, PostgreSQL, MongoDB", "Redis, SQLite", "Database Design"],
   },
   {
     category: "Development Tools",
     skills: [
-      "Figma, Adobe XD, Canva",
+      "Figma, Penpot, Canva",
       "Bruno, Postman, Insomnia",
       "VS Code, Android Studio, Xcode",
+      "Qoder, Antigravity",
+      "TablePlus, DBngin",
+      "Notion, Google Workspace, Plane",
     ],
   },
 ];
