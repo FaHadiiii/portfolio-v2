@@ -7,6 +7,8 @@ import { Terminal, Copy, Check, ChevronRight } from "lucide-react";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import FallingText from "@/components/FallingText";
 
+import SectionHeader from "./SectionHeader";
+
 export default function TechnicalSkills() {
   const [activeTab, setActiveTab] = useState(0);
   const [copied, setCopied] = useState(false);
@@ -34,21 +36,11 @@ export default function TechnicalSkills() {
 
   return (
     <section id="technical-skills" className="relative group">
+      <SectionHeader index={5} title="Skills" />
       <style>{`
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
-      {/* Section Header */}
-      <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
-        <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] px-3.5">
-            Technical Skills
-          </span>
-          <span className="text-[11px] text-[var(--foreground)] bg-[var(--border)]/40 border border-[var(--border)] rounded px-1.5 py-0.5 mr-3">
-            {technicalSkills.length} Categories
-          </span>
-        </div>
-      </div>
 
       <div className="max-w-3xl mx-auto ">
         <motion.div

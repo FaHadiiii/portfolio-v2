@@ -4,15 +4,7 @@ import Link from "next/link";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { Press_Start_2P } from "next/font/google";
 import { useEffect, useState } from "react";
-
-const navLinks = [
-  "About",
-  "Experience",
-  "Education",
-  "Projects",
-  "Honors",
-  "Contact",
-];
+import { navLinks } from "@/lib/data";
 
 const pixelFont = Press_Start_2P({
   weight: "400",
@@ -31,7 +23,8 @@ export default function Navbar() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    const element = document.getElementById(id);
+    const targetId = id === "skills" ? "technical-skills" : id;
+    const element = document.getElementById(targetId);
     if (element) {
       const navbarHeight = 64; // header h-12 (48px) + mt-4 (16px) or just enough space
       const elementPosition = element.getBoundingClientRect().top;
@@ -44,7 +37,7 @@ export default function Navbar() {
       });
 
       // Update URL hash without jumping
-      window.history.pushState(null, "", `#${id}`);
+      window.history.pushState(null, "", `#${targetId}`);
     }
   };
 
@@ -71,7 +64,7 @@ export default function Navbar() {
           {navLinks.map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`#${item === "Skills" ? "technical-skills" : item.toLowerCase()}`}
               onClick={(e) => handleScroll(e, item.toLowerCase())}
               className="hidden sm:block text-xs font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] px-2.5 py-1.5 rounded-md transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2"
             >

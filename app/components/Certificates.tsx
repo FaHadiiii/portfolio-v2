@@ -28,20 +28,12 @@ const certificates = certificatesData.map((cert) => ({
   fallbackIcon: fallbackIconMap[cert.iconType as keyof typeof fallbackIconMap],
 }));
 
+import SectionHeader from "./SectionHeader";
+
 export default function Certificates() {
   return (
     <section id="honors" className="relative bg-transparent">
-      {/* Section Header */}
-      <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
-        <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] px-3.5">
-            Certificates & Rewards
-          </span>
-          <span className="text-[11px] text-[var(--foreground)] bg-[var(--border)]/40 border border-[var(--border)] rounded px-1.5 py-0.5 mr-3">
-            {certificates.length} Honors
-          </span>
-        </div>
-      </div>
+      <SectionHeader index={6} title="Honors" />
 
       <div className="max-w-3xl mx-auto relative group">
         {/* Row Header - Minimal spacing */}

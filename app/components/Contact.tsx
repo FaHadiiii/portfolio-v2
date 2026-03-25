@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
+import SectionHeader from "./SectionHeader";
+
 export default function Contact() {
   const [form, setForm] = useState({ email: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
@@ -33,14 +35,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative border-b border-[var(--border)]">
-      {/* Header */}
-      <div className="w-screen relative left-1/2 -translate-x-1/2 border-b border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
-        <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] px-3">
-            Let's Connect
-          </span>
-        </div>
-      </div>
+      <SectionHeader index={7} title="Contact" />
 
       {/* Form rows */}
       <div>

@@ -10,7 +10,9 @@ import {
   ContributionGraphLegendItem,
 } from "@/components/kibo-ui/contribution-graph";
 
-import { aboutBullets, profileData } from "@/lib/data";
+import { aboutBullets, navLinks, profileData } from "@/lib/data";
+
+import SectionHeader from "./SectionHeader";
 
 async function getContributions() {
   const username = profileData.github;
@@ -42,14 +44,7 @@ export default async function About() {
 
   return (
     <section className="relative pb-4">
-      {/* Header */}
-      <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
-        <div className="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] px-3.5">
-            About Me
-          </span>
-        </div>
-      </div>
+      <SectionHeader index={1} title="About Me" />
 
       <div className="max-w-3xl mx-auto px-3.5 sm:px-6 lg:px-3.5 mt-4 relative">
         {/* Bullets Section with BackgroundBeams */}

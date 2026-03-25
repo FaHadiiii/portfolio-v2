@@ -1,3 +1,13 @@
+export const navLinks = [
+  "About",
+  "Experience",
+  "Education",
+  "Projects",
+  "Skills",
+  "Honors",
+  "Contact",
+];
+
 export const profileData = {
   name: "Ahmad Fakhrul Hadi",
   role: "Software Developer",
@@ -217,7 +227,7 @@ export const projects = [
     description:
       "Developed as part of a certificate requirement for Khazanah Nasional. The primary responsibility involved building the backend using Express.js and MySQL, ensuring secure and efficient data handling for user rewards and transactions.",
     tags: ["Express.js", "MySQL", "React", "Render", "Figma"],
-    href: "",
+    href: "https://loyalty-webapp.onrender.com/",
     status: "Archived",
     logo: "/logo/optima.png",
   },
@@ -321,7 +331,7 @@ export const testimonials = [
     quote:
       "Bagi requirement, dia faham, siap. And when something in the flow looks off, dia raise it — saves a lot of back and forth on our end.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQHqCFr3AX31PA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718215657451?e=1775692800&v=beta&t=n_6SiiRRPT1rChPjKHLS73Rx5IcfyzrQBwFipOleQ6A",
+      "https://media.licdn.com/dms/image/v2/D5603AQGxU_NKmOZreA/profile-displayphoto-scale_400_400/B56Z0jolMgKcAg-/0/1774419337133?e=1776297600&v=beta&t=Bc-JzBc_yzw1WNrOQ0nBjtDVlXDpu-pCVzVbBpEK9PA",
     linkedin: "https://www.linkedin.com/in/nurul-ashikin-4b44b528a/",
   },
   {
