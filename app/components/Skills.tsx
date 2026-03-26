@@ -32,7 +32,7 @@ export default function Skills() {
             <img
               src={`https://cdn.simpleicons.org/${skill.slug}`}
               alt={skill.name}
-              className={`w-4 h-4 lg:w-6 lg:h-6 object-contain ${
+              className={`w-6 lg:h-6 object-contain ${
                 skill.invertDark ? "dark:invert" : ""
               }`}
             />

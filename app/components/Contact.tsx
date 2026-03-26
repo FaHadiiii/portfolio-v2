@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative border-b border-[var(--border)]">
-      <SectionHeader index={7} title="Contact" />
+      <SectionHeader index={7} title="Let's Connect" />
 
       {/* Form rows */}
       <div>

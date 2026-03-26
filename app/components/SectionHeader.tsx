@@ -11,7 +11,7 @@ export default function SectionHeader({ index, title }: SectionHeaderProps) {
 
   return (
     <div className="w-screen relative left-1/2 -translate-x-1/2 border-y border-[var(--border)] bg-[var(--background-muted)]/80 backdrop-blur-sm z-20">
-      <div className="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
+      <div className="max-w-3xl mx-auto px-3.5 lg:px-4 py-5 flex items-center justify-between">
         <div className="flex items-center">
           {/* Left border accent */}
           <div className="w-[2px] h-5 bg-[var(--foreground)] mr-4" />
