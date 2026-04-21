@@ -300,7 +300,7 @@ export const testimonials = [
     quote:
       "Kenal Hadi dari zaman degree, now kerja sekali pulak 😆 Work-wise dia buat apa yang perlu, tak banyak drama. Sekarang ni banyak buat mobile stuff dengan UI/UX.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5635AQElAQrVWwkmKA/profile-framedphoto-shrink_400_400/B56ZzyUHNyKYAg-/0/1773591884902?e=1774774800&v=beta&t=IIuIwS_t1cQyNFLr65Mfq_BM2aStwOkaFAUSmXTOn3k",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/hafiy-aiman.jpg",
     linkedin: "https://www.linkedin.com/in/hafiy-aiman-husain/",
   },
   {
@@ -310,7 +310,7 @@ export const testimonials = [
     quote:
       "Known this guy since degree — punctual to a fault, always the first to chase people when deadlines are near 😆 But honestly that's what gets things done, solid teammate.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D4E03AQEi5wKEDJu8Xw/profile-displayphoto-shrink_400_400/B4EZZuCy4bHEAg-/0/1745602949413?e=1775692800&v=beta&t=e8T-l0fqykuTmjjrnBG03i4cPBosZy73c8k9sSXZAcM",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/zul-ifwat.jpg",
     linkedin: "https://www.linkedin.com/in/muhammad-zul-ifwat-zulkefli/",
   },
   {
@@ -320,7 +320,7 @@ export const testimonials = [
     quote:
       "Selalu brainstorm and discuss stuff about kerja. Kadang ada idea random, tapi kita just try je 😆 It’s easy and chill to work with him, no drama.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5635AQEkhby65_GAHg/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1713250616130?e=1774774800&v=beta&t=p0314PxJJUheLtD2Pm6LDJ72BLLbCcm0j_-SFtLv_4U",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/hazizi-hamdan.jpg",
     linkedin:
       "https://www.linkedin.com/in/mohamed-hazizi-bin-hamdan-a17bb2215/",
   },
@@ -331,14 +331,14 @@ export const testimonials = [
     quote:
       "Bagi requirement, dia faham, siap. And when something in the flow looks off, dia raise it — saves a lot of back and forth on our end.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQGxU_NKmOZreA/profile-displayphoto-scale_400_400/B56Z0jolMgKcAg-/0/1774419337133?e=1776297600&v=beta&t=Bc-JzBc_yzw1WNrOQ0nBjtDVlXDpu-pCVzVbBpEK9PA",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/nurul-ashikin.jpg",
     linkedin: "https://www.linkedin.com/in/nurul-ashikin-4b44b528a/",
   },
   {
     name: "Syaff Ibrahim",
     quote: "Hehe❤️",
     avatar:
-      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/gift-bucket/portfolio/sni.jpg",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/syaff-ibrahim.jpg",
   },
   {
     name: "Faris Muzzammil",
@@ -347,7 +347,7 @@ export const testimonials = [
     quote:
       "Met during his internship at Todak, good guy to hang around with. Work ethic pun nampak okay dari what I can tell.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQF89NRF9EIp_g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676620793422?e=1775692800&v=beta&t=Lxk26Bh9AtCUF5W98IhhWQCnpfCk8Evj6bS6dZWDOp4",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/faris-muzzammil.jpg",
     linkedin: "https://www.linkedin.com/in/faris-muzzammil/",
   },
   {
@@ -357,7 +357,7 @@ export const testimonials = [
     quote:
       "Kawan sekolah, tak sangka end up in the same field 😄 Dia ni tak banyak berubah dari dulu, still the same Hadi.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5635AQECre6u6m1zuQ/profile-framedphoto-shrink_400_400/B56ZsQ_jFaJ4Ak-/0/1765516653159?e=1774774800&v=beta&t=2gZ05nHxmi1QVUtKCDIQL1BebuAAs-N6ZQpgJCeo_Tc",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/muhammad-fazreen.jpg",
     linkedin: "https://www.linkedin.com/in/muhammad-fazreen-09562b302/",
   },
   {
@@ -367,7 +367,7 @@ export const testimonials = [
     quote:
       "Known him since degree, dia suka panggil i cina 🤣 One of the easier people to get along with. Straightforward, fun to be around, and gets things done.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQEM8TB4wTJZng/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725262417948?e=1775692800&v=beta&t=uPpLTxS0pOjUNSoE4Hu5L0982fMgoV0jwXPYo2IrkQU",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/ian-chee.jpg",
     linkedin: "https://www.linkedin.com/in/iancheews/",
   },
   {
@@ -376,7 +376,7 @@ export const testimonials = [
     company: "Intelli-Mark Consolidated",
     quote:
       "Lama dah kenal, selalu study and group project sama. Tak banyak hal, senang nak keja dengan dia. Dia buat bahagian dia, kita buat bahagian kita, siapp...",
-    avatar: "https://api.dicebear.com/9.x/big-smile/svg?seed=Jameson",
+    avatar: "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/azim-jamalludin.svg",
     linkedin: "https://www.linkedin.com/in/azim-jamalludin-653175340/",
   },
   {
@@ -386,7 +386,7 @@ export const testimonials = [
     quote:
       "Working with Hadi is easy — no drama. Biasa jadi go-to-guy untuk opinion on UI UX design discussion.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D4D35AQGggNDu522UXA/profile-framedphoto-shrink_400_400/B4DZznQ7_VGsAc-/0/1773406503249?e=1774778400&v=beta&t=Q8zXlp9QSlO07AZp3pJjqhlVnuJOX9dwDrcGoB1Q__A",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/ahmad-afiffudin.jpg",
     linkedin: "https://www.linkedin.com/in/ahmadafifudding/",
   },
   {
@@ -396,7 +396,7 @@ export const testimonials = [
     quote:
       "Jumpa random kat masjid, terus klik macam kenal lama, rupanya sama-sama orang tranung hoho 😄 Selalu exchange knowledge pasal kerja masing-masing. Overall, good guy.",
     avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQFqivSAAAutHg/profile-displayphoto-shrink_400_400/B56ZaRBIErHAAg-/0/1746189717094?e=1775692800&v=beta&t=W2YcokHWD2jKBKWHOgmXjP_SUjZzph_VsoS2ZzVatoM",
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/firdaus-taqiyuddin.jpg",
     linkedin:
       "https://www.linkedin.com/in/firdaus-taqiyuddin-ahamad-6706a0225/",
   },
