@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
+import { JsonLd } from "@/components/JsonLd";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -15,7 +16,8 @@ const inter = Inter({
 });
 
 const title = "AFH — Software Developer";
-const description = "Fakhrul Hadi | Software Developer | Personal Portfolio";
+const description =
+  "Ahmad Fakhrul Hadi (AFH) is a Software Developer based in Kuala Lumpur, MY. Specializing in Flutter, React, and Next.js to craft polished, high-performance mobile and web applications.";
 const url = "https://hadiayo.site";
 const ogImage = "/image/SEO.png";
 
@@ -26,8 +28,17 @@ export const metadata: Metadata = {
     template: `%s | AFH`,
   },
   description,
-  keywords: ["software developer", "portfolio", "Fakhrul Hadi", "AFH"],
-  authors: [{ name: "Fakhrul Hadi", url }],
+  keywords: [
+    "Ahmad Fakhrul Hadi",
+    "Fakhrul Hadi",
+    "hadiayo",
+    "software developer",
+    "portfolio",
+    "AFH",
+    "Flutter developer",
+    "Next.js developer",
+  ],
+  authors: [{ name: "Ahmad Fakhrul Hadi", url }],
   alternates: {
     canonical: "/",
   },
@@ -77,6 +88,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen text-[var(--foreground)] font-sans relative bg-[var(--background-muted)]">
+        <JsonLd />
         <Analytics />
         <ThemeProvider
           attribute="class"
@@ -90,3 +102,4 @@ export default function RootLayout({
     </html>
   );
 }
+
