@@ -52,9 +52,9 @@ export const technicalSkills = [
   {
     category: "Programming & Frameworks",
     skills: [
-      "TypeScript, JavaScript, Node.js, Express.js",
-      "Next.js, React.js",
-      "HTML5, CSS3, Tailwind CSS, Bootstrap",
+      "TS, Js, Node, Express.js",
+      "Next.js, React.js, Tanstack",
+      "HTML5, CSS3, Tailwind CSS",
       "Flutter, Dart",
       "Flask, C, C++",
     ],
@@ -73,12 +73,10 @@ export const technicalSkills = [
   {
     category: "DevOps & Infrastructure",
     skills: [
-      "Docker Compose, Ubuntu, CICD",
-      "AWS EC2, Cloudflare R2, AWS S3",
+      "Docker, Ubuntu, CICD",
+      "AWS EC2, Cloudflare",
       "AWS RDS, Alibaba ApsaraDB",
-      "Server Deployment, VPS Management",
-      "Nginx, Caddy, Zoloz",
-      "Git, DNS Management",
+      "Nginx, Git, DNS",
     ],
   },
   {
@@ -114,7 +112,7 @@ export const experiences = [
     logo: "/logo/fnt.webp",
     role: "Software Engineer (Mobile)",
     type: "Contract",
-    period: "2025 — Present",
+    period: "2025 — 2026",
     duration: "1+ year",
     current: true,
     achievements: [
@@ -195,24 +193,6 @@ export const education = [
 ];
 
 export const projects = [
-  {
-    name: "BolaJom",
-    description:
-      "Building a platform to streamline football venue booking while helping players organise matches and connect within the community.",
-    tags: [
-      "Express.js",
-      "MySQL",
-      "Flutter",
-      "Figma",
-      "Redis",
-      "Meilisearch",
-      "Firebase",
-      "Docker",
-    ],
-    href: "",
-    status: "Ongoing",
-    logo: "/logo/bolajom.png",
-  },
   {
     name: "e-Portfolio",
     description:
@@ -334,12 +314,12 @@ export const testimonials = [
       "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/nurul-ashikin.jpg",
     linkedin: "https://www.linkedin.com/in/nurul-ashikin-4b44b528a/",
   },
-  {
-    name: "Syaff Ibrahim",
-    quote: "Hehe❤️",
-    avatar:
-      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/syaff-ibrahim.jpg",
-  },
+  // {
+  //   name: "Syaff Ibrahim",
+  //   quote: "Hehe❤️",
+  //   avatar:
+  //     "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/syaff-ibrahim.jpg",
+  // },
   {
     name: "Faris Muzzammil",
     role: "UI/UX Designer",
@@ -376,7 +356,8 @@ export const testimonials = [
     company: "Intelli-Mark Consolidated",
     quote:
       "Lama dah kenal, selalu study and group project sama. Tak banyak hal, senang nak keja dengan dia. Dia buat bahagian dia, kita buat bahagian kita, siapp...",
-    avatar: "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/azim-jamalludin.svg",
+    avatar:
+      "https://mpihmrlplcogpjdwbbwl.supabase.co/storage/v1/object/public/portfolio/azim-jamalludin.svg",
     linkedin: "https://www.linkedin.com/in/azim-jamalludin-653175340/",
   },
   {
